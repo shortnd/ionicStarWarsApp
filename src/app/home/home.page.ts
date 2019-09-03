@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  myVariable: string = 'The force is with me!';
+
   constructor() {}
+
+  updateMyVariable(): void {
+    this.myVariable = 'Now the force is even stronger!';
+  }
 
 }
