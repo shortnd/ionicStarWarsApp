@@ -10,7 +10,8 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       { 
-        path: 'films', children: [
+        path: 'films', 
+        children: [
           { path: '', loadChildren: '../films/films.module#FilmsPageModule', },
           { path: ':id', loadChildren: '../film-details/film-details.module#FilmDetailsPageModule' }
         ]
@@ -21,6 +22,10 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../people/people.module#PeoplePageModule'
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../person-detail/person-detail.module').then(m => m.PersonDetailPageModule)
           }
         ]
       },

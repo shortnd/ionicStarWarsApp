@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/films`)
   }
 
-  getFilm(id: number) {
+  getFilm(id: string) {
     return this.http.get(`${this.baseUrl}/film/${id}`);
   }
 
@@ -24,7 +24,7 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/people/`);
   }
 
-  getPerson(id: number) {
+  getPerson(id: string) {
     return this.http.get(`${this.baseUrl}/people/${id}`);
   }
 
@@ -32,7 +32,7 @@ export class ApiService {
     return this.http.get(`${this.baseUrl}/planets`);
   }
 
-  getPlanet(id: number) {
+  getPlanet(id: string) {
     return this.http.get(`${this.baseUrl}/planets/${id}`);
   }
 }
